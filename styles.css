@@ -1,0 +1,11 @@
+.body {
+    max-width: 600px;
+    margin: 0px auto;
+}
+   .image {
+    height: 500px;
+    width: auto;
+      }
+      li {
+  color: orange;
+}
