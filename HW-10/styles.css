@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+  }
+  
+  .lightsaber {
+    margin-bottom: 150px;
+  }
+  
+  .line {
+    width: 350px;
+    height: 5px;
+    background: linear-gradient(
+      -270deg,
+      #ffffff 0%,
+      #ffffff 70%,
+      #000 70%,
+      #000 85%,
+      #ffffff 85%,
+      #ffffff 100%
+    );
+    margin: 100px 0;
+  }
+  
+  .lightsaber::before,
+  .lightsaber::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 5px;
+    background: linear-gradient(
+      270deg,
+      #ffffff 0%,
+      #ffffff 70%,
+      #000 70%,
+      #000 85%,
+      #ffffff 85%,
+      #ffffff 100%
+    );
+    transition: 1s ease-in-out;
+  }
+  
+  .lightsaber:hover .line {
+    visibility: hidden;
+  }
+  
+  .lightsaber:hover::before {
+    transform: translateY(105px) rotate(-45deg);
+    box-shadow: 0px 0px 75px 10px rgb(252, 3, 3);
+  }
+  
+  .lightsaber:hover::after {
+    transform: translateY(-105px) rotate(-135deg);
+    box-shadow: 0px 0px 75px 10px rgb(9, 219, 9);
+  }
+  
+  .container {
+    width: 600px;
+    height: 400px;
+    background: rgb(146, 191, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ball:first-child {
+    animation-name: firstball;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .ball:last-child {
+    animation-name: lastball;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .ball:first-child,
+  .ball:nth-child(2) {
+    background: #7c48ee;
+  }
+  
+  .ball:nth-child(3) {
+    background: linear-gradient(to right, #7c48ee, #d378d6);
+  }
+  
+  .ball:nth-child(4) {
+    background: linear-gradient(to right, #d378d6, #d232a7);
+  }
+  
+  .ball:nth-child(5) {
+    background: #d525a6;
+  }
+  
+  .ball:nth-child(6) {
+    background: linear-gradient(to right, #d525a6, #df2457);
+  }
+  
+  .ball:last-child {
+    background: #df2457;
+  }
+  
+  .ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 72px 16px -16px rgb(0 0 0 / 40%);
+  }
+  
+  @keyframes firstball {
+    25% {
+      transform: translate(-50px, -50px);
+      box-shadow: 0px 112px 24px -18px rgb(0 0 0 / 40%);
+    }
+    50% {
+      transform: translate(0px, 0px);
+      box-shadow: 0px 72px 16px -16px rgb(0 0 0 / 40%);
+    }
+  }
+  
+  @keyframes lastball {
+    50% {
+      transform: translate(0px, 0px);
+      box-shadow: 0px 72px 16px -16px rgb(0 0 0 / 40%);
+    }
+    75% {
+      transform: translate(50px, -50px);
+      box-shadow: 0px 112px 24px -18px rgb(0 0 0 / 40%);
+    }
+  }
