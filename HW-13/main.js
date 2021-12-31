@@ -32,4 +32,4 @@ player = new YT.Player('video', {
     width: '640',
     videoId: 'M7lc1UVf-VE'
 });
-}
+} 
