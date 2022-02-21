@@ -30,7 +30,6 @@ console.log (`Сумма усіх товарів округлених в мен�
 const DifOfProduct = (500 - SumPrice);
 console.log (`Решта при покупці усіх товарів: ${DifOfProduct}`);
 
-
 const AverageValue = (SumPrice / 3).toFixed(2);
 console.log (`Середня ціна округлення двох знаків після коми: ${AverageValue}`);
 
